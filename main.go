@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/tomgco/aws-okta/cmd"
+	"github.com/Hons/aws-okta/cmd"
 )
 
 // These are set via linker flags
