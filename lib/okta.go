@@ -124,12 +124,12 @@ func (o *OktaClient) AuthenticateUser() error {
 
 	// Step 2 : Challenge MFA if needed
 	log.Debug("Step: 2a")
-	if o.UserAuth.Status == "MFA_REQUIRED" {
+	// if o.UserAuth.Status == "MFA_REQUIRED" {
 		log.Info("Requesting MFA. Please complete two-factor authentication with your second device")
 		if err = o.challengeMFA(); err != nil {
 			return err
 		}
-	}
+	// }
 
 	if o.UserAuth.SessionToken == "" {
 		return fmt.Errorf("authentication failed for %s", o.Username)
